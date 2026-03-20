@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"net/http"
+	"example/web-service-gin/nestedStruct"
 )
 
 type Album struct {
@@ -55,5 +56,6 @@ func main() {
 	router.POST("/albums", createAlbum)
 	router.GET("/albums/:id", getAlbumByID)
 	fmt.Println("Hello, World!")
+	NestedStruct.NestedStruct()
 	router.Run("localhost:8080")
 }
